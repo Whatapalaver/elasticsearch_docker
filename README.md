@@ -18,3 +18,9 @@ Following a [dokerised elasticsearch tutorial](https://blog.patricktriest.com/te
 - visit `localhost:9200` to view elasticsearch
 - run `docker exec gs-api "node" "server/load_data.js"` to load all the book data into the elastic search container
 
+For changes to backend code you need to rebuild the container but the frontend public directory is mounted to the Nginx fileserver so changes will be reflected automatically.
+
+## Searching
+
+- for the json output visit `http://localhost:3005/search?term=darwin`
+- for the Vue.js search console visit `http://localhost:8080/`
